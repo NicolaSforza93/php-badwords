@@ -1,6 +1,7 @@
 <?php
-$text = "Con l'aiuto di fedeli robot e altri preziosi alleati, il giovane Luke Skywalker deve salvare la principessa ribelle Leila e sconfiggere l'Impero che costringe la galassia sotto il suo controllo.";
+$text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 $replace = $_POST['replace_word'];
+$script = $_POST['script'];
 
 ?>
 
@@ -19,9 +20,9 @@ $replace = $_POST['replace_word'];
     <!-- Stampo la lunghezza del testo -->
     <p>Il testo è lungo <?php echo strlen($text); ?> caratteri</p>
     <!-- Salvo il testo censurato in una variabile -->
-    <p><?php $censored = str_replace($replace, '***', $text); ?></p>
+    <p><?php $censored = str_replace($replace, '***', $script); ?></p>
     <!-- Stampo il testo censurato -->
-    <p><?php echo str_replace($replace, '***', $text); ?></p>
+    <p><?php echo $censored; ?></p>
     <!-- Stampo la lunghezza del testo censurato -->
     <p>Il testo è lungo <?php echo strlen($censored); ?> caratteri</p>
 
